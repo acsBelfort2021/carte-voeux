@@ -1,0 +1,333 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* MON CSS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+body {
+    background-color: #4834d4;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.bold {
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.container {
+    width: 80%;
+    max-width: 1080px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+
+/* SVG */
+
+.svg-1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.svg-2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.svg-3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.svg-4 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.bidule {
+    height: calc(30px + 2vw);
+    width: calc(30px + 2vw);
+}
+
+.bidule path {
+    animation: cardAnim 2.5s cubic-bezier(0.8, 0, 0.2, 1.2) infinite;
+    -webkit-animation: cardAnim 2.5s cubic-bezier(0.8, 0, 0.2, 1.2) infinite;
+}
+
+@keyframes cardAnim {
+
+    0%,
+    100% {
+        fill: #f0842b;
+        d: path('M53.8367971,98.0105931 C62.5709372,90.6149791 66.2112484,87.5325537 70.0435525,83.9893009 C72.7823134,81.4571109 75.6191301,78.6895642 80.4832815,73.9441868 C92.1537616,62.5586791 96.1292776,60.2840306 102.768438,50.2737766 C109.407598,40.2635227 109.562285,19.9893997 97.8949026,8.83310282 C86.2275205,-2.32319407 65.6287893,-3.34048116 53.8367971,12.6102024 C42.7337698,-3.12466085 21.4090627,-3.84487569 8.62341819,8.83310282 C-4.16222634,21.5110813 -0.873759373,43.5215692 6.53796897,53.1409641 C13.9496973,62.7603591 14.192282,61.619107 27.18463,73.9441868 C40.176978,86.2692666 40.176978,86.2692666 53.8367971,98.0105931 Z');
+    }
+
+    50% {
+        fill: #f0842b;
+        d: path('M47.0733712,115.058105 C47.4100427,114.390075 51.87634,105.790536 58.6510079,95.6299408 C61.3834707,91.5318141 75.754243,73.4853618 79.5956177,69.3575656 C82.3483693,66.3995627 86.3942962,62.4442739 91.7333984,57.4916992 C85.3540489,53.2612305 76.894088,44.8198242 66.3535156,32.1674805 C55.8129433,19.5151367 49.1927962,8.79264323 46.4930745,0 C41.8278874,10.0341797 34.9431516,20.7566732 25.8388672,32.1674805 C16.7345828,43.5782878 8.12162703,52.019694 0,57.4916992 C10.8533079,66.4956055 19.5749876,74.9956055 26.1650391,82.9916992 C36.0501163,94.9858398 38.2597656,98.434082 47.0733712,115.058105 Z');
+    }
+}
+
+/* Target chrome only , see http://browserhacks.com/ */
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+    small {
+        display: none;
+    }
+}
+
+#content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+#content p {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.title {
+    width: 100%;
+}
+
+.title path {
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    stroke: white;
+    fill: transparent;
+    animation: draw 3s linear forwards;
+    -webkit-animation: draw 3s linear forwards;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+        fill: white;
+    }
+}
+
+/* FORM */
+
+form {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+label {
+    color: white;
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    display: block;
+    background-color: transparent;
+    border: white 1px solid;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    padding: 7px 7px;
+    outline: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    font-family: 'Roboto',
+        sans-serif;
+    display: block;
+    margin: auto;
+    background-color: transparent;
+    border: white 1px solid;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    padding: 7px 7px;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: #4834d4;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+}
+
+#message {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.form-group {
+    padding: 5px;
+    margin-bottom: 10px;
+}
